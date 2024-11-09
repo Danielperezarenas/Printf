@@ -6,11 +6,10 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 22:13:30 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/31 12:53:28 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:34:43 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_putint(int n)
@@ -34,11 +33,11 @@ int	ft_print_unsigned_int(unsigned int n)
 	len = 10;
 	num[len] = '\0';
 	if (n == 0)
-		return ft_putchr('0');
+		return (ft_putchr('0'));
 	while (n > 0)
 	{
 		num[--len] = (n % 10) + '0';
 		n /= 10;
 	}
-	return write(1, &num[len], 10 - len);
+	return (write(1, &num[len], 10 - len));
 }

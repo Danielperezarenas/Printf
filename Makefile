@@ -6,7 +6,7 @@
 #    By: danperez <danperez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 00:46:35 by danperez          #+#    #+#              #
-#    Updated: 2024/10/31 12:47:08 by danperez         ###   ########.fr        #
+#    Updated: 2024/11/09 15:04:37 by danperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ all: $(LIBFT) $(NAME)
 
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
+	@mv $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ)
 		@$(AR) $(NAME) $(OBJ)

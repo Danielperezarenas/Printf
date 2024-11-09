@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:18:20 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/22 10:15:42 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:46:47 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	if (s && f)
 	{

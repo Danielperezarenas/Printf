@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:50:26 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/25 18:27:05 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:43:30 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,9 @@ int	main(void)
 	printf("List: %s\n", (char *)head -> content);
 
 	while (head != NULL)
-	{
-		printf("Node content: %s\n", (char *)head->content);  // Imprime el contenido del nodo
+	{ 
+		// Imprime el contenido del nodo
+		printf("Node content: %s\n", (char *)head->content); 
 		head = head->next;  // Avanza al siguiente nodo
 	}
 

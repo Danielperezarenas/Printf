@@ -6,13 +6,13 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 17:31:48 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/27 00:24:05 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:42:41 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*element;
@@ -62,13 +62,15 @@ int main(void) {
 
 	// Imprimir la lista original
 	printf("Original list:\n");
-	for (t_list *current = node1; current != NULL; current = current->next) {
+	for (t_list *current = node1; current != NULL; current = current->next)
+	{
 		printf("Content: %s\n", (char *)current->content);
 	}
 
 	// Imprimir la lista mapeada
 	printf("\nMapped list:\n");
-	for (t_list *current = mapped_list; current != NULL; current = current->next) {
+	for (t_list *current = mapped_list; current != NULL; current = current->next)
+	{
 		printf("Content: %s\n", (char *)current->content);
 	}
 

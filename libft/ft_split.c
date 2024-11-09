@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:46:44 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/17 23:57:52 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:46:11 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static int	word_count(const char *s, char c)
 	}
 	return (count);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**str;

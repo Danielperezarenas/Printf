@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:02:59 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/31 12:35:07 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:35:04 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_print_pointer(void *ptr)
 	addr = (unsigned long long)ptr;
 	hex[len] = '\0';
 	if (addr == 0)
-		return ft_putstr("(nil)");
+		return (ft_putstr("(nil)"));
 	while (addr > 0)
 	{
 		hex[--len] = "0123456789abcdef"[addr % 16];
@@ -31,5 +31,5 @@ int	ft_print_pointer(void *ptr)
 	}
 	count = ft_putstr("0x");
 	count += write(1, &hex[len], 16 - len);
-	return count;
+	return (count);
 }

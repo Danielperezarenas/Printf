@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 04:19:51 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/27 00:50:19 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:47:09 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!subs)
 		return (NULL);
 	while (j < len && s[i])
-		{
-			subs[j] = s[i];
-			j++;
-			i++;
-		}
+	{
+		subs[j] = s[i];
+		j++;
+		i++;
+	}
 	subs[j] = '\0';
 	return (subs);
 }

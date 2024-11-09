@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 20:35:49 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/11 04:13:10 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:45:41 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		ptr = NULL;
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
-		return NULL;
+		return (NULL);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
-

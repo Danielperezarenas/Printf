@@ -6,13 +6,13 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:18:45 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/25 19:22:41 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:42:12 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);

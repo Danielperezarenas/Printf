@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:29:31 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/22 00:33:31 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:46:57 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);
-		i++;	
+		i++;
 	}
 	str[i] = '\0';
 	return (str);

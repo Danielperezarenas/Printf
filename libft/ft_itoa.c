@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:33:09 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/22 00:33:40 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:41:15 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	reverse(char *str, int len)
 {
 	char	temp;
 	int		start;
-	int 	end;
+	int		end;
 
 	start = 0;
 	end = len - 1;
@@ -65,7 +65,7 @@ static void	reverse(char *str, int len)
 
 static int	numlen(int n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n < 0)

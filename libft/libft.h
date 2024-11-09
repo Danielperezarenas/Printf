@@ -22,7 +22,7 @@
 
 // Definition of the structure for linked lists
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

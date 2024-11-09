@@ -6,13 +6,13 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:00:53 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/22 11:13:22 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:45:25 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (*s)
 	{
@@ -23,8 +23,8 @@ void ft_putstr_fd(char *s, int fd)
 		}
 	}
 }
-/* 
-int	main(void)
+
+/* int	main(void)
 {
 	ft_putstr_fd("Hola Campus 42!\n", 1);
 	return (0);

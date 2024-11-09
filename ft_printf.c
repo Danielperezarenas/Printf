@@ -6,17 +6,17 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:09:21 by danperez          #+#    #+#             */
-/*   Updated: 2024/10/31 13:00:03 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:12:31 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 
 static int	handle_format(char c, va_list args)
 {
-	int count = 0;
+	int	count;
 
+	count = 0;
 	if (c == 'c')
 		count += ft_putchr(va_arg(args, int));
 	else if (c == 's')
@@ -33,8 +33,11 @@ static int	handle_format(char c, va_list args)
 		count += ft_print_pointer(va_arg(args, void *));
 	else if (c == '%')
 		count += ft_putchr('%');
+	else
+		return (-1);
 	return (count);
 }
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
@@ -51,12 +54,17 @@ int	ft_printf(const char *format, ...)
 			i++;
 			count += handle_format(format[i], args);
 		}
+		else if (!format[i + 1])
+		{
+			if (count == -1)
+				return (-1);
+		}
 		else
 			count += ft_putchr(format[i]);
 		i++;
 	}
 	va_end(args);
-	return count;
+	return (count);
 }
 /*
 int	main(void)
