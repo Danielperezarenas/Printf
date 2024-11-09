@@ -6,7 +6,7 @@
 /*   By: danperez <danperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:09:21 by danperez          #+#    #+#             */
-/*   Updated: 2024/11/09 16:12:31 by danperez         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:59:19 by danperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,10 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	while (format[i])
 	{
-		if (format[i] == '%' && format[i + 1])
+		if (format[i] == '%')
 		{
 			i++;
 			count += handle_format(format[i], args);
-		}
-		else if (!format[i + 1])
-		{
 			if (count == -1)
 				return (-1);
 		}
@@ -66,7 +63,7 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-/*
+/* 
 int	main(void)
 {
 	int	ft_ret, real_ret;
@@ -121,7 +118,13 @@ int	main(void)
 	ft_ret = ft_printf("Porcentaje: %%\n");
 	real_ret = printf("Porcentaje: %%\n");
 	printf("ft_printf: %d, printf: %d\n\n", ft_ret, real_ret);
-
+	
+	ft_ret = ft_printf("%");
+	printf("%d\n", ft_ret);
+	
+	int a = ft_printf("%");
+	printf("%d\n", a);
+	
 	return (0);
 }
 */
